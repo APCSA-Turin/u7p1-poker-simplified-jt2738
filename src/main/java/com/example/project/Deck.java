@@ -24,11 +24,17 @@ public class Deck{
     }
 
     public  void shuffleDeck(){ //You can use the Collections library or another method. You do not have to create your own shuffle algorithm
-        
+        Collections.shuffle(cards);
     }
 
     public  Card drawCard(){
-       return new Card("","");
+        if (cards.size()!=0) {
+            Card topCard= cards.get(0);
+            cards.remove(0);
+        }else{
+            return null;
+        }
+        return topCard;
     }
 
     public  boolean isEmpty(){
