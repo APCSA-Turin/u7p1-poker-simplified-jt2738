@@ -102,7 +102,8 @@ public class Player{
 
     public ArrayList<Integer> findRankingFrequency(){
         ArrayList<Integer> freq= new ArrayList<Integer>(); //array list lsting the frequences at each idx of list
-        ArrayList<String> ranks= new ArrayList<String>("2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"); //array list showing all ranks
+        ArrayList<String> ranks= new ArrayList<String>(); //array list showing all ranks
+        Collections.addAll(ranks, "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A");
         for(int i=0; i<ranks.size();i++){ //iterate through ranks list to see how many times that rank shows up in freq
             int count=0; //count to show freq of each rank
             for(int j=0; j<allCards.size();i++){
@@ -117,7 +118,8 @@ public class Player{
 
     public ArrayList<Integer> findSuitFrequency(){ //finds the frequency of each suit in the given deck. same as rank but w/ suit commands instead
         ArrayList<Integer> freq= new ArrayList<Integer>(); //sets as new, empty list
-        ArrayList<String> suits= new ArrayList<String>("♠", "♥", "♣", "♦"); //array list that's being used to check if each of the items are in the given deck
+        ArrayList<String> suits= new ArrayList<String>(); //array list that's being used to check if each of the items are in the given deck
+        Collections.addAll(suits, "♠", "♥", "♣", "♦");
         for(int i=0; i<suits.size();i++){ 
             int count=0;
             for(int j=0; j<allCards.size();j++){
