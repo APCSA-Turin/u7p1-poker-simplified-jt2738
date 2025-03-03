@@ -28,7 +28,7 @@ public class Deck{
     }
 
     public  Card drawCard(){
-        if (cards.size()!=0) {
+        if (isEmpty()) {
             Card topCard= cards.get(0);
             cards.remove(0);
         }else{

@@ -40,7 +40,7 @@ public class Utility{
         return -1;
     }
 
-    public static int getHandRanking(String result){
+    public static int getHandRanking(String result){ //use this to compare which of the two players will win
         switch(result){
             case "Royal Flush": return 11;
             case "Straight Flush": return 10;
