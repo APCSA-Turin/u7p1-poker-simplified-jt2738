@@ -28,8 +28,8 @@ public class Deck{
     }
 
     public  Card drawCard(){
+        Card topCard= cards.get(0);
         if (isEmpty()) {
-            Card topCard= cards.get(0);
             cards.remove(0);
         }else{
             return null;
