@@ -168,14 +168,14 @@ public class Player{
         return false;
     }
     public boolean containsSuitFreq(int num){ //same as rank but w/ suits 
-        for(int i=0; i<findSuitFrequency().size();i++){
+        for(int i=0; i<findSuitFrequency().size();i++){ 
             if (findSuitFrequency().get(i)==num) {
                 return true;
             }
         }
         return false;
     }
-    public int determineHighest(){
+    public int determineHighest(){ //this method returns the value of the highest card in the player's OWN hand deck (NOT from all cards)
         int highest= Utility.getRankValue(hand.get(0).getRank());
         for(int i=1; i<hand.size();i++){
             if (Utility.getRankValue(hand.get(i).getRank())>highest){
